@@ -1,29 +1,29 @@
 %define upstream_name    Test-Spec
 %define upstream_version 0.38
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	2
 
-Summary:    RSpec-like testing for Perl
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	RSpec-like testing for Perl
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl(Carp)
-BuildRequires: perl(Exporter)
-BuildRequires: perl(List::Util)
-BuildRequires: perl(Package::Stash)
-BuildRequires: perl(Scalar::Util)
-BuildRequires: perl(TAP::Parser)
-BuildRequires: perl(Test::Deep)
-BuildRequires: perl(Test::More)
-BuildRequires: perl(Test::Trap)
-BuildRequires: perl(Tie::IxHash)
-BuildRequires: perl(constant)
-BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	perl-devel
+BuildRequires:	perl(Carp)
+BuildRequires:	perl(Exporter)
+BuildRequires:	perl(List::Util)
+BuildRequires:	perl(Package::Stash)
+BuildRequires:	perl(Scalar::Util)
+BuildRequires:	perl(TAP::Parser)
+BuildRequires:	perl(Test::Deep)
+BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Test::Trap)
+BuildRequires:	perl(Tie::IxHash)
+BuildRequires:	perl(constant)
+BuildArch:	noarch
 
 %description
 This is a declarative specification-style testing system for
@@ -43,24 +43,26 @@ EXPORTS
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
 %make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc Changes META.yml README
 %{_mandir}/man3/*
-%perl_vendorlib/*
+%{perl_vendorlib}/*
 
+%changelog
+* Mon Jul 18 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.380.0-1mdv2011
++ Revision: 690329
+- update to new version 0.38
+
+* Fri Jul 01 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.350.0-1
++ Revision: 688483
+- import perl-Test-Spec
 
