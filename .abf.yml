@@ -1,2 +1,4 @@
+removed_sources:
+  Test-Spec-0.38.tar.gz: 7ecdb5211ccf1b0dfdd58a5bca66cc5b0a247aeb
 sources:
-  "Test-Spec-0.38.tar.gz": 7ecdb5211ccf1b0dfdd58a5bca66cc5b0a247aeb
+  Test-Spec-0.46.tar.gz: 53fac63afa4ad61c205fa0939605c481fb93bbb7
