@@ -8,7 +8,7 @@ Release:	3
 Summary:	RSpec-like testing for Perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Test/Test-Spec-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
