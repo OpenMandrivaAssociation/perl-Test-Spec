@@ -1,15 +1,15 @@
 %define upstream_name    Test-Spec
-%define upstream_version 0.47
+%define upstream_version 0.54
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	RSpec-like testing for Perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Test/Test-Spec-%{upstream_version}.tar.gz
+Url:		https://github.com/kingpong/perl-Test-Spec
+Source0:	https://cpan.metacpan.org/authors/id/A/AK/AKZHAN/Test-Spec-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
