@@ -9,7 +9,7 @@ Summary:	RSpec-like testing for Perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/kingpong/perl-Test-Spec
-Source0:	https://cpan.metacpan.org/authors/id/A/AK/AKZHAN/Test-Spec-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/A/AK/AKZHAN/Test-Spec-0.54.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -57,15 +57,4 @@ perl Makefile.PL INSTALLDIRS=vendor
 %doc Changes META.yml README
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
-
-%changelog
-* Mon Jul 18 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.380.0-1mdv2011
-+ Revision: 690329
-- update to new version 0.38
-
-* Fri Jul 01 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.350.0-1
-+ Revision: 688483
-- import perl-Test-Spec
-
-
 
