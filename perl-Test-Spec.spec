@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	0.54
-Release:	11
+Release:	1
 
 Summary:	RSpec-like testing for Perl
 License:	GPL+ or Artistic
@@ -45,18 +45,18 @@ EXPORTS
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-%make
-
+%make_build
 %check
 # soft: do not fail package on test failures
 set +e
+make test || :
 %make test || :
 
 %install
 %makeinstall_std
 
 %files
-%doc Changes META.yml README
+%doc Changes META.yml README.md
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
 
