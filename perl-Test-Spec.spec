@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	0.54
-Release:	4
+Release:	5
 
 Summary:	RSpec-like testing for Perl
 License:	GPL+ or Artistic
